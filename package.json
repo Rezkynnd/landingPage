@@ -1,0 +1,14 @@
+{
+  "name": "putr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass-sub/sub.scss css-sub/style.css -w"
+  },
+  "author": "Rez",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

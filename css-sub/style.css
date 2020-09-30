@@ -1,0 +1,144 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Barlow", sans-serif;
+  /* font-size: 16px; */
+  font-weight: 400;
+  color: #777;
+  line-height: 1.7;
+  padding: 3rem;
+  box-sizing: border-box; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(14, 21, 58, 0.8), rgba(34, 209, 238, 0.8)), url(../img/hero-image.jpg);
+  background-position: top;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem; }
+
+.header__logo {
+  width: 16rem; }
+
+.header__text-box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.heading-primary {
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 3rem; }
+
+.heading-primary--logo {
+  height: 25rem;
+  animation: popUp 2s ease-in-out 1s;
+  animation-fill-mode: backwards; }
+
+.heading-primary--main {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2.5rem;
+  display: block;
+  animation: moveInLeft 2s ease-in-out; }
+
+.heading-primary--sub {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  display: block;
+  animation: moveInRight 2s ease-in-out; }
+
+/* animated for text box */
+@keyframes popUp {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+/* Create Button */
+.btn:link, .btn:visited {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  display: inline-block;
+  position: relative;
+  transition: all 0.2s; }
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); }
+  .btn:hover::after {
+    opacity: 0;
+    transform: scale(1.4, 1.6); }
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); }
+
+.btn--white {
+  color: #777;
+  background-color: #fff; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  border-radius: 10rem;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s; }
+
+.btn--animated {
+  animation: moveInBottom 0.8s ease-in-out 2s;
+  animation-fill-mode: backwards; }
