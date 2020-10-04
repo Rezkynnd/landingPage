@@ -207,7 +207,22 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0.5rem;
   padding: 2.5rem;
-  text-align: center; }
+  text-align: center;
+  font-size: 1.5rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.45);
+  transition: all 0.2s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #3d5af1, #22d1ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: scale(1.05) translateY(-1.5rem);
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.55); }
 
 .row {
   max-width: 114rem;
@@ -263,4 +278,8 @@ body {
 .section-features {
   padding: 20rem 0;
   background-image: linear-gradient(to right bottom, rgba(14, 21, 58, 0.8), rgba(34, 209, 238, 0.8)), url(../../img/hero-image-2.jpeg);
-  background-size: cover; }
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem; }
+  .section-features > * {
+    transform: skewY(7deg); }
