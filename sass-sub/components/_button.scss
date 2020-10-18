@@ -37,6 +37,15 @@
     }
   }
 
+  &--color {
+    color: $color-white;
+    background-color: darken($color-primary-light, 5%);
+
+    &::after {
+      background-color: darken($color-primary-light, 5%);
+    }
+  }
+
   &::after {
     content: "";
     height: 100%;
