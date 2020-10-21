@@ -5,7 +5,7 @@
   margin: 0 auto;
   padding: 6rem;
   padding-left: 9rem;
-  border-radius: 0.3rem;
+  border-radius: $border-radius-small;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.15);
   transform: skew(-12deg);
   transition: all 0.5s ease;
